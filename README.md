@@ -21,10 +21,9 @@ Designed with a focus on simplicity and accuracy, this tool measures read and wr
 You can download the latest pre-compiled binaries from the [Releases](https://github.com/tiadiff/diskspeed-test/releases) page.
 
 ### macOS
-1. Download `SSDSpeedTest.app.zip`.
-2. Unzip and move `SSDSpeedTest.app` to your Applications folder.
+1. Download `DSpeedTest-MacOS.zip`.
+2. Unzip and move it to your Applications folder.
 3. Open the app. 
-   *(Note: You may need to right-click and select "Open" the first time if it's not signed with an Apple Developer ID).*
 
 ### Windows
 1. Download `SSDSpeedTestWin.exe`.
@@ -37,8 +36,8 @@ You can download the latest pre-compiled binaries from the [Releases](https://gi
 ### Prerequisites
 
 - **macOS**: Xcode (or Command Line Tools) with Swift 5.0+ installed.
-- **Windows**: .NET 8.0 SDK (or later) if building on Windows. If cross-compiling from macOS, ensure the .NET SDK is installed.
-
+- **Windows**: .NET 8.0 SDK (or later) if building on Windows.
+  
 ### macOS (Swift)
 
 1. Clone the repository:
