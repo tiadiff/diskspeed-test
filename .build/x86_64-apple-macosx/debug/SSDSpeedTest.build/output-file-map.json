@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/master.swiftdeps"
+  },
+  "/Users/tiadiff/Locale/speed-test/Sources/ContentView.swift": {
+    "dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.d",
+    "object": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swift.o",
+    "swiftmodule": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.dia"
+  },
+  "/Users/tiadiff/Locale/speed-test/Sources/DiskSpeedTester.swift": {
+    "dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.d",
+    "object": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swift.o",
+    "swiftmodule": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester~partial.swiftmodule",
+    "swift-dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swiftdeps",
+    "diagnostics": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.dia"
+  },
+  "/Users/tiadiff/Locale/speed-test/Sources/SpeedTestApp.swift": {
+    "dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.d",
+    "object": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swift.o",
+    "swiftmodule": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swiftdeps",
+    "diagnostics": "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.dia"
+  }
+}

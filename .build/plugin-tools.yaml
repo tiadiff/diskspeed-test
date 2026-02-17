@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe": ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe>"]
+  "SSDSpeedTest-x86_64-apple-macosx15.0-debug.module": ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.module>"]
+  "main": ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe>","<SSDSpeedTest-x86_64-apple-macosx15.0-debug.module>"]
+  "test": ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe>","<SSDSpeedTest-x86_64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/tiadiff/Locale/speed-test/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest":
+    is-mutated: true
+commands:
+  "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest-entitlement.plist"]
+    description: "Write auxiliary file /Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest-entitlement.plist"
+
+  "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/tiadiff/Locale/speed-test/Sources/ContentView.swift","/Users/tiadiff/Locale/speed-test/Sources/DiskSpeedTester.swift","/Users/tiadiff/Locale/speed-test/Sources/SpeedTestApp.swift"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/sources"]
+    description: "Write auxiliary file /Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/sources"
+
+  "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swift.o"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.product/Objects.LinkFileList"
+
+  "/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe>"]
+
+  "<SSDSpeedTest-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/Modules/SSDSpeedTest.swiftmodule"]
+    outputs: ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.module>"]
+
+  "C.SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.product/Objects.LinkFileList"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/SSDSpeedTest"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug","-o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest","-module-name","SSDSpeedTest","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_SSDSpeedTest_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","x86_64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/Modules/SSDSpeedTest.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest-entitlement.plist"]
+    outputs: ["<SSDSpeedTest-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/x86_64-apple-macosx/debug/SSDSpeedTest"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest-entitlement.plist","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest"]
+
+  "C.SSDSpeedTest-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/tiadiff/Locale/speed-test/Sources/ContentView.swift","/Users/tiadiff/Locale/speed-test/Sources/DiskSpeedTester.swift","/Users/tiadiff/Locale/speed-test/Sources/SpeedTestApp.swift","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/sources"]
+    outputs: ["/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/ContentView.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/DiskSpeedTester.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/SpeedTestApp.swift.o","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/Modules/SSDSpeedTest.swiftmodule"]
+    description: "Compiling Swift Module 'SSDSpeedTest' (3 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","SSDSpeedTest","-emit-dependencies","-emit-module","-emit-module-path","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/Modules/SSDSpeedTest.swiftmodule","-output-file-map","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/output-file-map.json","-incremental","-c","@/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/SSDSpeedTest.build/sources","-I","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx13.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/tiadiff/Locale/speed-test/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","SSDSpeedTest_main","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","speed_test"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/tiadiff/Locale/speed-test/Sources/","/Users/tiadiff/Locale/speed-test/Package.swift","/Users/tiadiff/Locale/speed-test/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

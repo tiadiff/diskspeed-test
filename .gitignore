@@ -1,0 +1,17 @@
+# Build Artifacts (macOS)
+.build_app/
+*.app/
+.DS_Store
+
+# Build Artifacts (Windows/C#)
+windows/**/bin/
+windows/**/obj/
+publish_windows/
+*.exe
+*.dll
+*.pdb
+.vs/
+*.user
+
+# Temporary Files
+.speedtest_temp_*
