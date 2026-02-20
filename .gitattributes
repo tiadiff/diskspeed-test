@@ -1,2 +1,2 @@
-Makefile linguist-vendored=true
-**/Makefile linguist-vendored=true
+* linguist-detectable=false
+*.swift linguist-detectable=true
