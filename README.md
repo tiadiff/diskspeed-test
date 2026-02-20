@@ -4,7 +4,7 @@ A minimal, modern SSD speed testing utility for macOS and Windows.
 
 Designed with a focus on simplicity and accuracy, this tool measures read and write speeds of internal and external drives using raw hardware access to bypass system caches. <br><br>
 
-<img width="550" height="378" alt="Screenshot 2026-02-17 alle 09 06 09" src="https://github.com/user-attachments/assets/0b2f5fbb-bec5-4f2a-be26-76ee39e2b3da" /> <br>
+<img width="550" height="378" alt="Screenshot 2026-02-17 alle 09 06 09" src="https://github.com/user-attachments/assets/0b2f5fbb-bec5-4f2a-be26-76ee39e2b3da" /> 
 
 
 ## Features
